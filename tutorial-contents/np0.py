@@ -10,6 +10,6 @@ for i in range(6):
     b.append(a)
 np.save('test2.npy', b)
 
-test=np.load('test2.npy')
+test=np.load('adm.npy')
 print(test.ndim)
 print(test.shape)
