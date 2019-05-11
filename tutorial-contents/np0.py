@@ -2,12 +2,13 @@
 # -*- coding: UTF-8 -*-
 import numpy as np
 
-#a = []b = []for i in range(6):    a.append(i)for i in range(6):    b.append(a)np.save('test2.npy', b)
-
-#test = np.load('adjacency_matrix.npy')
-#print(test.ndim) print(test.shape)
-
-with open('weibo_network.txt') as file_object:
-    lines = file_object.readlines()
-for line in lines[:5]:
-    print(line)
+n=5
+b=np.zeros([n+1,n+1],dtype=int)
+a = np.loadtxt('test.txt')#将test文件作为npy文件读取出来
+print(a)
+for i in range(0,n):
+    b[0][i+1] = b[i+1][0] = a[i][0]
+for i in range(n):
+    for j in range(len(a[i])):
+        b[i+1][]
+print(b)
