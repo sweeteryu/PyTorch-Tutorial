@@ -4,6 +4,8 @@ import numpy as np
 
 a = np.loadtxt('weibo_network.txt')#将test文件作为npy文件读取出来
 print(a)
+a = np.loadtxt('weibo_network.txt')[:1]
+print(a)
 #np.save('test.npy',a)#存储a为npy文件
 #test=np.load('test.npy')#读取该npy文件
 #print(test)
