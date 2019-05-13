@@ -6,7 +6,7 @@ import re
 n = int(input('please input center node id n:'))
 #生成邻接矩阵
 filename = 'weibo_network.txt' # txt文件和当前脚本在同一目录下，所以不用写具体路径
-adjacentmatrix = np.zeros([5,5],dtype=int)
+adjacentmatrix = np.zeros([1787443,1787443],dtype=int)
 pos = []
 with open(filename, 'r') as f:
   while True:
@@ -19,9 +19,9 @@ with open(filename, 'r') as f:
     pass
   pos = np.array(pos) # 将数据从list类型转换为array类型。
   pass
-#for i in range(0,5):
+#for i in range(0,1787443):
  #   a[0][i+1] = a[i+1][0] = pos[i+1][0]
-for i in range(1,6):
+for i in range(1,1787444):
     #print(len(pos[i]))
     for j in range(2,len(pos[i])-1,2):
            if j%2 == 0 and j != 0:
@@ -43,9 +43,9 @@ basicattenlist = indegree
 #print('the basicattenlist is:%s'%basicattenlist)
 
 #生成follow结构信息
-constrmatrix = np.zeros([5,5],dtype=int)
-for i in range(5):
-    for j in range(5):
+constrmatrix = np.zeros([1787443,1787443],dtype=int)
+for i in range(1787443):
+    for j in range(1787443):
         if adjacentmatrix[i][j] == 1:
             if adjacentmatrix[j][i] == 1:
                 constrmatrix[i][j] = 2
