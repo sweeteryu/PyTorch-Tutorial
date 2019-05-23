@@ -11,6 +11,6 @@ import numpy as np
 with open('weibo_network.txt', 'r') as f:
     data = f.readlines()  # txt中所有字符串读入data
 
-    for line in data[:1]:
+    for line in data[:2]:
         #test = line.split()  # 将单个数据分隔开存好
         print(line)
